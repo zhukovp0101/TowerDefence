@@ -83,12 +83,12 @@ namespace DefaultNamespace
         private Vector2 GetNodeCenter(Vector2Int gridCoordinates)
         {
             return new Vector2(gridCoordinates.x * m_NodeSize + m_Origin.x + m_NodeSize * 0.5f, 
-                gridCoordinates.y * m_NodeSize + m_Origin.y + m_NodeSize * 0.5f);
+                gridCoordinates.y * m_NodeSize + m_Origin.z + m_NodeSize * 0.5f);
         }
 
         private Vector2Int GetGridCoordinates(float x, float y)
         {
-            return new Vector2Int((int)((x - m_Origin.x) / m_NodeSize), (int)((y - m_Origin.y) / m_NodeSize));
+            return new Vector2Int((int)((x - m_Origin.x) / m_NodeSize), (int)((y - m_Origin.z) / m_NodeSize));
         }
 
         private void OnDrawGizmos()
